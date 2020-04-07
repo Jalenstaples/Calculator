@@ -1,0 +1,55 @@
+*, *::before, *::after {
+box-sizing: border-box;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: normal;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, red,blue);
+}
+.Calculator{
+  display: grid;
+  justify-content:center ;
+  align-items: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4,100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px) ;
+}
+.Calculator > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color:grey ;
+}
+.Calculator > button:hover {
+  background-color: grey;
+}
+.span-two{
+  grid-column: span 2;
+}
+.Output{
+  grid-column: 1/-1;
+  background-color: black;
+  display: flex;
+  align-items: flex-end ;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.Output .Top {
+  color: grey;
+  font-size: 1.5rem ;
+}
+.Output .Bottom {
+  color: white;
+  font-size: 2.5rem ;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
